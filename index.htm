@@ -23,8 +23,7 @@
 		height:210px;
 		margin:10px 0px 10px 5px;
 	}
-	.col-md-3 a{color:#790000;text-decoration:none;}
-	h3{color:#790000;}
+	.col-md-3 a,.col-md-3 h3 {color:#790000;text-decoration:none;}
 	.logo{margin-top:10px;}
 	.logo-left{ font-size:14pt; text-align:center;}
 	.logo-left span{ font-size:11pt;}
@@ -40,79 +39,9 @@
 
     <!--Container-->
 	<div class="container" style="max-width:1024px; box-shadow:0px 0px 5px 5px #999999;padding:0px">
-  	<header class="bs-docs-header" role="contentinfo" style="background-color:#bbb;color:#fff;text-align:right;padding:2px">
-			<a href="http://www.facebook.com/pages/bayside-historical-society/216918355028492"><img class="icon" src="images/icon_fb.gif" /></a>
-			<a href="#"><img class="icon" src="images/icon_pinterest.png" /></a>
-			<a href="#"><img class="icon" src="images/icon_twitter.png" /></a>
-			<a href="#"><img class="icon" src="images/icon_contact.png" /></a>
-	</header>
-	<!--Logo-->
-	<div class="col-md-4 col-sm-6 col-xs-6 logo-left"><span>A Queens Cultural Institution</span><br/><img src="images/logo_sm.png" alt="Bayside Historical Society" height="80px"><br/>Bayside Historical Society</div>
-	<div class="col-md-8 col-sm-6 col-xs-12 logo-right">Preserving the past and connecting with the present for the future</div>
 	
-	<!--Nav-->
-    <div class="navbar navbar-inverse" role="navigation" style="clear:both;margin:0px 0px 0px 0px;border-radius:0px">
-      <!--<div class="container">-->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse" style="background-color:transparent;padding:0px 0px 0px 0px">
-          <ul class="nav navbar-nav" style="background-color:transparent;width:100%;margin:0px">
-			<li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title">About</span> <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu" style="width:100%">
-                <li><a href="#">Mission</a></li>
-                <li><a href="#">History</a></li>
-				<li class="divider"></li>
-                <li><a href="#">The Castle</a></li>
-				<li><a href="#">Lawrence </br>Cemetery</a></li>
-				<li class="divider"></li>
-				<li><a href="#">Trustees</a></li>
-				<li><a href="#">Staff</a></li>
-				<li class="divider"></li>
-				<li><a href="#">Contact</a></li>
-				
-              </ul>
-            </li>
-			<li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title">Visit</span> <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">General Information</a></li>
-				<li class="divider"></li>
-                <li><a href="#">Groups</a></li>
-                <li><a href="#">Accessibility</a></li>
-				<li class="divider"></li>
-				<li><a href="#">Rentals</a></li>
-				<li><a href="#">Events</a></li>
-				<li><a href="#">Location Shoots</a></li>
-              </ul>
-            </li>
-			<li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title">Support</span> <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Join</a></li>
-				<li class="divider"></li>
-                <li><a href="#">Donate</a></li>
-                <li><a href="#">Gift in Honor</a></li>
-                <li><a href="#">Planner Giving</a></li>
-              </ul>
-            </li>
-			<li><a href="#exhibits"><span class="menu-title">Exhibits</span></a></li>
-            <li><a href="#education"><span class="menu-title">Learn</span></a></li>
-            <li><a href="#events"><span class="menu-title">Events</span></a></li>
-			<li><a href="#collections"><span class="menu-title">Collections</span></a></li>
-			<li><a href="#rentals"><span class="menu-title">Rentals</span></a></li>
-
-			
-          </ul>
-        </div><!--/.nav-collapse -->
-      <!--</div>-->
-    </div>
+	<!--Header-->
+  	<div role="navigation"></div>
 	
 	<!--Banner-->
       <div class="col-md-12" style="background-image:url('images/bannerIndex2.jpg');height:350px;margin-bottom:10px">
@@ -185,5 +114,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+      $(document).ready(function(){
+          $("div[role=navigation]").load("header.html")
+      })
+    </script>
   </body>
 </html>
