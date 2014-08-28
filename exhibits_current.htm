@@ -23,7 +23,7 @@
 		height:210px;
 		margin:10px 0px 10px 5px;
 	}
-	.col-md-3 a,.col-md-3 h3 {color:#790000;text-decoration:none;}
+	.col-md-3 a {color:#790000;text-decoration:none;}
 	.logo{margin-top:10px;}
 	.logo-left{ font-size:14pt; text-align:center;}
 	.logo-left span{ font-size:11pt;}
@@ -33,6 +33,13 @@
 	.icon{height:30px}
 	.bs-docs-header .icon {height:20px}
 	.menu-title {font-size:14pt;}
+	#sidebar ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 5px;
+	}
+	#main-content{ border-left:#666666 solid thin; padding-left:15px}
+	#main-content p{margin:10px 0px 10px 0px}
 	</style>
   </head>
   <body>
@@ -44,47 +51,46 @@
   	<div role="navigation"></div>
 	
 	<!--Banner-->
-      <div class="col-md-12" style="background-image:url('images/bannerIndex2.jpg');height:350px;margin-bottom:10px">
+      <div class="col-md-12" style="background-image:url('images/hell_gate_2.jpg');height:300px;margin-bottom:10px">
     
       </div>
 	
 	<!--Contnet Panels-->
       
       <div class="row" style="padding:15px">
-        <div class="col-md-3">
-          <h3>On View</h3>
-		  <img src="images/banner1sm.jpg">
-
-          <p>The Castle features a variety of offerings.  Changing exhibits and long-term installations cultivate interest in the history and culture of northeast Queens.  Many materials used are culled from the archival collection, and encourage conversation and inquiry.</p>
-          <p><a href="exhibits.htm">Learn More &#9654;</a></p>
+        <div class="col-md-3" id="sidebar">
+		  <h3><a href="exhibits.htm">Exhibits</a></h3>
+		  <ul>
+          <li><a href="exhibits_current.htm">Current Exhibits</a></li>
+		  <li><a href="">Past Exhibits</a></li>
+		  <li><a href="">Online Exhibits</a></li>
+		  </ul>
         </div>
-        <div class="col-md-3">
-          <h3>Field Trips</h3>
-		  <img src="images/banner2sm.jpg">
+        <div class="col-md-9" id="main-content">
+          <h2>Current Exhibits</h2>
+			<h3>If the Hat Fits</h3>
+			<img src="images\top_hat_up.gif">
+			<p>Until the latter half of the 20th Century, hats were an essential piece of fashion for both men and women. They have been used to define social status, occupation, group membership, and have also been worn to, of course, express individuality or conformity to society's standards and expectations.
 
-          <p>Schedule a field trip to the Castle; arrange an in-class program at your school; learn about an after-school program for middle school students; plan an outing for seniors, scouts, or summer campers.  Cultural exchange, dialogue and self-discovery are encouraged through demonstration, lecture, and hands-on approach, while supporting learning, curiosity, and creativity in an informal environment.</p>
-          <p><a href="#">Learn More &#9654;</a></p>
+			Nineteen hats from BHS's archival collection are currently on display. They provide an overview of prevalent styles from the 19th and early 20th centuries.
+			</p>
+
+			<h3>Native Bayside</h3>
+			<img src="images\NativeBayside.JPG">
+			<p>
+			Native Bayside chronicles the prehistory of Bayside and the Northeast through artifacts recovered from an archaeological site in Queens and a model of the site excavation. The culmination of 35 years of work by archaeologist Edward J. Platt and the New York Institute of Anthropology, the Bayside site is the oldest carbon-14 dated continually inhabited site in coastal New York State.
+			</p>
+			<h3>The Castle</h3>
+			<img src="images\castleexhibit.jpg">
+			<p>The exhibit explores the origins of the Castle from its design and use as the U.S. Army Corps of Engineers Officers’ Club in the mid-19th century to its reinterpretation as a cultural venue by BHS beginning in the 1980s.
+			</p>
+          
        </div>
-        <div class="col-md-3">
-          <h3>Upcoming Programs</h3>
-		  <img src="images/banner4sm2.jpg">
-
-          <p>Performances, lectures, collections, social gatherings, family programs, and current events engage visitors at the Castle, and cultivate appreciation for our area’s historic and cultural resources.</p>
-          <p><a href="#">Learn More &#9654;</a></p>
-        </div>
-		<div class="col-md-3">
-          <h3>Private Events</h3>
-		  <img src="images/banner5sm.jpg">
-
-          <p>The Castle is available for private rental.  The architectural elegance of this Gothic Revival-style building provides the perfect setting for your special event.  The charming historic character of Ft. Totten on Little Neck Bay will add to the happy memories of your momentous day.</p>
-          <p><a href="#">Learn More &#9654;</a></p>
-        </div>
+        
       </div>
 	<!--Footer-->
 	<footer class="bs-docs-footer" role="contentinfo" style="background-color:#999999;color:#fff">
-	<div class="row" style="padding:15px;">
-		
-	</div>
+	<div class="row" style="padding:15px;"></div>
 	</footer>
 	<!--End Container-->
 	</div>
