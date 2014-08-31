@@ -54,7 +54,7 @@
   	<div role="navigation"></div>
 	
 	<!--Banner-->
-      <div class="col-md-12" style="background-image:url('images/headerAbout.jpg');height:300px;margin-bottom:10px">
+      <div class="col-md-12" style="background-image:url('images/headerVisit.jpg');height:300px;margin-bottom:10px">
     
       </div>
 	
@@ -62,24 +62,51 @@
       
       <div class="row" style="padding:15px">
         <div class="col-md-3" id="sidebar">
-		  <h3><a href="about.htm">About</a></h3>
+		  <h3>Visit</h3>
 		  <ul>
-          <li><a >Mission &amp; History</a></li>
-		  <li><a >The Castle</a></li>
-		  <li><a >Lawrence Cemetery</a></li>
-		  <li><a >Trustees</a></li>
-		  <li><a >Staff</a></li>
-		  <li><a >Contact</a></li>
+		  <li><a class="visit.htm">General Information</a></li>
+		  <li><a href="learn.htm">Group</a></li>
+		  <li><a href="rentals.htm">Rental</a></li>
+		  <li><a href="events.htm">Event</a></li>
+		  <li><a href="locationShoot.htm">Location Shoot</a></li>
 		  </ul>
         </div>
         <div class="col-md-9" id="main-content">
-    
-       </div>
+			<div class="row" style="padding:15px;">
+			<h2>Plan Your Visit</h2>
+			<p>Brief Overview</p>
+			
+			<h3>Admission</h3>
+			<p>BHS is open to the public year-round. </p>
+			<p>
+			Weekdays: 10am-4pm<br/>
+			Weekends: 12pm-4pm<br/>
+			</p>
+			<p>A suggested $5 admission helps defray BHS’s operating expenses and maintain the Castle. Information about school, youth, college, and adult group programs are available on our Groups page.</p>
+
+			<p>The Castle has a wheelchair accessible ramp with first floor access and a wheelchair accessible restroom. There is no elevator to the second floor, but there is a chair stair lift in place.
+			</p>
+
+			<h3>Directions:</h3>
+			<p>The entrance to Fort Totten is located at the corner of Bell Boulevard and 212th Street.</p>
+
+			<p>Car: Clearview Expressway to Exit 7 (Willets Point Boulevard); turn right onto Bell Boulevard; turn left onto 212th Street which leads into Fort Totten - or - Cross Island Parkway North to Exit 32 (Bell Boulevard) and make a right at the light into Little Bay Park and Fort Totten Park.<br/><br/>
+
+			Arrangements to drive into the park must be made in advance. Please call the Castle for details. 718.352.1548</p>
+
+			<p>Bus: Q13 or Q16 to Fort Totten Park.</p>
+
+			<p>LIRR: Port Washington Line to Bayside, then either cab or bus to Fort Totten Park.</p>
+
+			<h3>Map:</h3>
+			<p><a href="https://maps.google.com/maps?es_sm=93&amp;um=1&amp;ie=UTF-8&amp;fb=1&amp;gl=us&amp;sll=40.792256,-73.777808&amp;sspn=0.024953,0.0439463&amp;cid=3949134323536654444&amp;q=Bayside+Historical+Society&amp;sa=X&amp;ei=4p4BVMjkIM3IsAT_7IDQBQ&amp;ved=0CIEBEPwSMA0" style="position:relative;height:160px;width:226px;display:block" target="_blank">
+			<img height="160" id="lu_map" src="https://maps.google.com/maps/vt/data=VLHX1wd2Cgu8wR6jwyh-km8JBWAkEzU4,nZN3BKpdOeBqkDUBiEOXGgiSdihh3qHoE2CjHYFzeRKAzUuzUQRCcphpsuVWStRkA4lo0pohjqOx0qcCRBApm79TdnfCA22QsngNL2l1P1p4Rk5GDwTbCN2bWoo" width="226" title="Map of Bayside Historical Society" alt="Map of Bayside Historical Society" border="0"></a></p>
+		   </div>
         
       </div>
 	<!--Footer-->
 	<footer class="bs-docs-footer" role="contentinfo" style="background-color:#999999;color:#fff">
-	<div class="row" style="padding:15px;"></div>
+	
 	</footer>
 	<!--End Container-->
 	</div>
@@ -90,27 +117,10 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript">
-		var topicsContent;
-
 		$(document).ready(function(){
 			$("div[role=navigation]").load("header.html")
 			$(".bs-docs-footer .row").load("footer.html")
-
-			var s = getParameterByName("s");
-			$.get("about_topics.html", function( data ) {
-				topicsContent = data.split("~");
-				$("#main-content").html(topicsContent[s]);
-			});
-			$("#sidebar a").click(function(){
-				var li = $(this).parent();
-				var pos = $("#sidebar li").index(li)
-				$("#main-content").html(topicsContent[pos]);
-			});
 		})
-		function getParameterByName(name) {
-			var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
-			return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
-		}
 
     </script>
   </body>
