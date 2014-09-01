@@ -42,6 +42,27 @@
 	#main-content{ border-left:#666666 solid thin; padding-left:15px}
 	#main-content p{margin:10px 0px 10px 0px}
 	.image_credit{color:#666666; font-size:10pt; padding-top:10px;}
+	
+    .event .date{font-weight: bold;}
+	.event img{max-width:300px;}
+	.event .content{padding:5px 5px 0px 10px;}
+	hr.style-eight {
+		padding: 0;
+		border: none;
+		border-top: medium double #999;
+		color: #999;
+		text-align: center;
+		margin-bottom:50px;
+	}
+	hr.style-eight:after {
+		content: "§";
+		display: inline-block;
+		position: relative; 
+		top: -0.7em;  
+		font-size: 1.5em;
+		padding: 0 0.25em;
+		background: white;
+	}
 	</style>
   </head>
   <body>
@@ -61,17 +82,14 @@
       
       <div class="row" style="padding:15px">
         <div class="col-md-3" id="sidebar">
-		  <h3><a href="collections.htm"></a></h3>
+		  <h3>Events</h3>
 		  <ul>
           <li><a href=""></a></li>
 		  <li><a href=""></a></li>
 		  <li><a href=""></a></li>
 		  </ul>
         </div>
-        <div class="col-md-9" id="main-content">
-          <h2>Events</h2>
-
-			
+        <div class="col-md-9" id="main-content">	
        </div>
         
       </div>
@@ -91,7 +109,19 @@
       $(document).ready(function(){
           $("div[role=navigation]").load("header.html")
 		  $(".bs-docs-footer .row").load("footer.html")
-      })
+		  
+		  $.getJSON("events.js",
+			function(result){
+				json_results = result;
+				var build = new Array("");
+				var tmp;
+				for(pos = 0; pos < result.events.length; pos++){
+				  tmp = result.events[pos];
+				  build.push('<div class="event" id="'+tmp.id+'"><h3>'+tmp.title+'</h3><div class="content"><p><img src="images/'+tmp.image+'" /></p><p class="date">Date: '+tmp.date+'</p><p class="date">Time: '+tmp.time+'</p><p class="date">Cost: '+tmp.cost+'</p><p>'+tmp.description+'</p></div><hr class="style-eight"> </div>')
+				}
+				$("#main-content").append(build.join(''));
+		  });	   
+	  });
     </script>
   </body>
 </html>
