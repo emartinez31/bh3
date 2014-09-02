@@ -74,7 +74,7 @@
   	<div role="navigation"></div>
 	
 	<!--Banner-->
-      <div class="col-md-12" style="background-image:url('images/headerRequired.jpg');height:300px;margin-bottom:10px">
+      <div class="col-md-12" style="background-image:url('images/headerEvent.jpg');height:300px;margin-bottom:10px">
     
       </div>
 	
@@ -84,12 +84,14 @@
         <div class="col-md-3" id="sidebar">
 		  <h3>Events</h3>
 		  <ul>
-          <li><a href=""></a></li>
-		  <li><a href=""></a></li>
-		  <li><a href=""></a></li>
+          <li><a href="">Current</a></li>
+		  <li><a href="">Upcoming</a></li>
+		  <li><a href="">Past</a></li>
 		  </ul>
         </div>
-        <div class="col-md-9" id="main-content">	
+        <div class="col-md-9" id="main-content">
+			<p>BHS offers an array of Public Programs in the arts and humanities in conjunction with exhibits, collections, and current events, that are comprehensive and meaningful, speak to contemporary life, and cultivate appreciation for the area’s historic, natural, and cultural resources.</p>
+			<div id="main-content-event"></div>
        </div>
         
       </div>
@@ -119,7 +121,7 @@
 				  tmp = result.events[pos];
 				  build.push('<div class="event" id="'+tmp.id+'"><h3>'+tmp.title+'</h3><div class="content"><p><img src="images/'+tmp.image+'" /></p><p class="date">Date: '+tmp.date+'</p><p class="date">Time: '+tmp.time+'</p><p class="date">Cost: '+tmp.cost+'</p><p>'+tmp.description+'</p></div><hr class="style-eight"> </div>')
 				}
-				$("#main-content").append(build.join(''));
+				$("#main-content-event").append(build.join(''));
 		  });	   
 	  });
     </script>
