@@ -54,7 +54,7 @@
   	<div role="navigation"></div>
 	
 	<!--Banner-->
-      <div class="col-md-12" style="background-image:url('images/headerAbout.jpg');height:300px;margin-bottom:10px">
+      <div class="col-md-12" id="bannerAbout" style="background-image:url('images/headerAbout.jpg');height:300px;margin-bottom:10px">
     
       </div>
 	
@@ -62,7 +62,7 @@
       
       <div class="row" style="padding:15px">
         <div class="col-md-3" id="sidebar">
-		  <h3><a href="about.htm">About</a></h3>
+		  <h3>About</h3>
 		  <ul>
           <li><a >Mission &amp; History</a></li>
 		  <li><a >The Castle</a></li>
@@ -91,7 +91,7 @@
     <script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 		var topicsContent;
-
+		var topicHeaders = ["About","About","Cemetery","Trustees","Staff","About"];
 		$(document).ready(function(){
 			$("div[role=navigation]").load("header.html")
 			$(".bs-docs-footer .row").load("footer.html")
@@ -99,11 +99,13 @@
 			var s = getParameterByName("s");
 			$.get("about_topics.html", function( data ) {
 				topicsContent = data.split("~");
+				$("#bannerAbout").css("background-image",'url(images/header'+topicHeaders[s]+'.jpg)')
 				$("#main-content").html(topicsContent[s]);
 			});
 			$("#sidebar a").click(function(){
 				var li = $(this).parent();
 				var pos = $("#sidebar li").index(li)
+				$("#bannerAbout").css("background-image",'url(images/header'+topicHeaders[pos]+'.jpg)')
 				$("#main-content").html(topicsContent[pos]);
 			});
 		})
