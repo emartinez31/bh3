@@ -42,6 +42,8 @@
 	#main-content{ border-left:#666666 solid thin; padding-left:15px}
 	#main-content p{margin:10px 0px 10px 0px}
 	.image_credit{color:#666666; font-size:10pt; padding-top:10px;}
+	/* This rule is read by Galleria to define the gallery height: */
+    #galleria{height:375px;}
 	</style>
   </head>
   <body>
@@ -60,17 +62,131 @@
 	<!--Contnet Panels-->
       
       <div class="row" style="padding:15px">
-        <div class="col-md-3" id="sidebar">
+        <!--<div class="col-md-3" id="sidebar">
 		  <h3><a href="collections.htm"></a></h3>
 		  <ul>
           <li><a href=""></a></li>
 		  <li><a href=""></a></li>
 		  <li><a href=""></a></li>
 		  </ul>
-        </div>
-        <div class="col-md-9" id="main-content">
+        </div>-->
+        <div class="col-md-12" id="main-content">
           <h2>Location Shoot</h2>
-		  <p>Situated in historic Fort Totten, the Castle and its surrounding space provide prime sites for your shoot whether it includes a period piece, a modern-day banquet, a music video, or anything in between.  A community for stage and screen stars dating back to the late 19th and early 20th centuries, Bayside remains film friendly. Just twenty miles from Midtown Manhattan, our distinctive building, waterfront setting, and natural areas are a true location scout’s find. Not impeded by automobile or people traffic and noise, this peaceful locale provides the perfect setting for a successful shoot.</p>			
+		  <p>Situated in historic Fort Totten, the Castle and its surrounding space provide prime sites for your shoot whether it includes a period piece, a modern-day banquet, a music video, or anything in between.  A community for stage and screen stars dating back to the late 19th and early 20th centuries, Bayside remains film friendly. Just twenty miles from Midtown Manhattan, our distinctive building, waterfront setting, and natural areas are a true location scout’s find. Not impeded by automobile or people traffic and noise, this peaceful locale provides the perfect setting for a successful shoot.</p>
+			<div id="galleria" style="max-width:400px">
+              <a href="images\siterental1.jpg">
+                  <img 
+                      src="images\siterental1.jpg"
+                      data-big="images\siterental1.jpg"
+                      data-title=""
+                      data-description=""
+                  >
+              </a>
+              <a href="images\siterental2.jpg">
+                  <img 
+                      src="images\siterental2.jpg"
+                      data-big="images\siterental2.jpg"
+                      data-title=""
+                      data-description=""
+                  >
+              </a>
+              <a href="images\siterental3.jpg">
+                  <img 
+                      src="images\siterental3.jpg"
+                      data-big="images\siterental3.jpg"
+                      data-title=""
+                      data-description=""
+                  >
+              </a>
+              <a href="images\siterental4.jpg">
+                  <img 
+                      src="images\siterental4.jpg"
+                      data-big="images\siterental4.jpg"
+                      data-title=""
+                      data-description=""
+                  >
+              </a>
+              <a href="images\siterental5.jpg">
+                  <img 
+                      src="images\siterental5.jpg"
+                      data-big="images\siterental5.jpg"
+                      data-title=""
+                      data-description=""
+                  >
+              </a>
+              <a href="images\siterental11.jpg">
+                  <img 
+                      src="images\siterental11.jpg"
+                      data-big="images\siterental11.jpg"
+                      data-title=""
+                      data-description=""
+                  >
+              </a>
+              <a href="images\siterental7.jpg">
+                  <img 
+                      src="images\siterental7.jpg"
+                      data-big="images\siterental7.jpg"
+                      data-title=""
+                      data-description=""
+                  >
+              </a>
+              <a href="images\siterental6.jpg">
+                  <img 
+                      src="images\siterental6.jpg"
+                      data-big="images\siterental6.jpg"
+                      data-title=""
+                      data-description=""
+                  >
+              </a>
+              <a href="images\siterental9.jpg">
+                  <img 
+                      src="images\siterental9.jpg"
+                      data-big="images\siterental9.jpg"
+                      data-title=""
+                      data-description=""
+                  >
+              </a>
+              <a href="images\siterental10.jpg">
+                  <img 
+                      src="images\siterental10.jpg"
+                      data-big="images\siterental10.jpg"
+                      data-title=""
+                      data-description=""
+                  >
+              </a>
+              <a href="images\siterental13.jpg">
+                  <img 
+                      src="images\siterental13.jpg"
+                      data-big="images\siterental13.jpg"
+                      data-title=""
+                      data-description=""
+                  >
+              </a>
+              <a href="images\siterental14.jpg">
+                  <img 
+                      src="images\siterental14.jpg"
+                      data-big="images\siterental14.jpg"
+                      data-title=""
+                      data-description=""
+                  >
+              </a>
+              <a href="images\siterental16.jpg">
+                  <img 
+                      src="images\siterental16.jpg"
+                      data-big="images\siterental16.jpg"
+                      data-title=""
+                      data-description=""
+                  >
+              </a>
+              <a href="images\siterental15.jpg">
+                  <img 
+                      src="images\siterental15.jpg"
+                      data-big="images\siterental15.jpg"
+                      data-title=""
+                      data-description=""
+                  >
+              </a>           
+          </div>		  
        </div>
         
       </div>
@@ -86,10 +202,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+	<script src="js/galleria-1.3.5.min.js"></script>
 	<script type="text/javascript">
       $(document).ready(function(){
           $("div[role=navigation]").load("header.html")
 		  $(".bs-docs-footer .row").load("footer.html")
+		  
+		  // Load the classic theme
+		  Galleria.loadTheme('galleria.classic.min.js');
+
+		  // Initialize Galleria
+		  Galleria.run('#galleria');
       })
     </script>
   </body>
