@@ -33,8 +33,8 @@
 	.icon{height:30px}
 	.bs-docs-header .icon {height:20px}
 	.menu-title {font-size:14pt;}
-	.news { position:relative; top: -5px }
-	.news img{cursor:pointer}
+	.news p, .news a{font-size:14pt}
+	.news img{cursor:pointer;}
 	</style>
   </head>
   <body>
@@ -53,12 +53,13 @@
 	
 	<div class="col-md-1 col-sm-1 col-xs-1 news" ><img src="images/prev.png" id="prev" height="30"></div>
 	<div class="col-md-10 col-sm-10 col-xs-10 news" id="announcement">
-		<p>Notifications</p>
-		<p>Oops</p>
+		<p>(1/3) A Taste of Honey - Thursday, November 20th at 7:30pm. <a href="events.htm">View Events</a></p>
+		<p>(2/3) Become a member. <a href="images/Membership%20Enrollment%20Form%20.pdf" target="_blank">Form</a></p>
+		<p>(3/3) Totten Trot 5k Foot Race. <a href="http://nycruns.com/totten-trot-5k-foot-race-1026/#/results::1415963326560" target="_blank">View Results</a></p>
 	</div>
 	<div class="col-md-1 col-sm-1 col-xs-1 news" style="text-align:right;"><img src="images/next.png" id="next" height="30"></div>
 	<!--Content Panels-->
-      
+    <div class="col-md-12"><hr/></div>
       <div class="row" style="padding:15px;">
         <div class="col-md-3">
           <h3>On View</h3>
@@ -111,7 +112,7 @@
 		  $('#announcement').cycle({ 
 				prev:   '#prev', 
 				next:   '#next', 
-				timeout: 0 
+				timeout: 0
 			});
       })
     </script>
