@@ -33,6 +33,8 @@
 	.icon{height:30px}
 	.bs-docs-header .icon {height:20px}
 	.menu-title {font-size:14pt;}
+	.news { position:relative; top: -5px }
+	.news img{cursor:pointer}
 	</style>
   </head>
   <body>
@@ -47,10 +49,17 @@
       <div class="col-md-12" style="background-image:url('images/headerIndex.jpg');height:350px;margin-bottom:10px">
     
       </div>
+	<!--Notification-->
 	
-	<!--Contnet Panels-->
+	<div class="col-md-1 col-sm-1 col-xs-1 news" ><img src="images/prev.png" id="prev" height="30"></div>
+	<div class="col-md-10 col-sm-10 col-xs-10 news" id="announcement">
+		<p>Notifications</p>
+		<p>Oops</p>
+	</div>
+	<div class="col-md-1 col-sm-1 col-xs-1 news" style="text-align:right;"><img src="images/next.png" id="next" height="30"></div>
+	<!--Content Panels-->
       
-      <div class="row" style="padding:15px">
+      <div class="row" style="padding:15px;">
         <div class="col-md-3">
           <h3>On View</h3>
 		  <img src="images/banner1sm.jpg">
@@ -94,10 +103,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.cycle.lite.js"></script>
 	<script type="text/javascript">
       $(document).ready(function(){
           $("div[role=navigation]").load("header.html")
 		  $(".bs-docs-footer .row").load("footer.html")
+		  $('#announcement').cycle({ 
+				prev:   '#prev', 
+				next:   '#next', 
+				timeout: 0 
+			});
       })
     </script>
   </body>
